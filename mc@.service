@@ -1,3 +1,7 @@
+# unit file by https://github.com/Quantum-Coder826
+# see https://github.com/Quantum-Coder826/mcService for info and docs
+# version 1.0
+
 [Unit]
 Description=Minecraft Server %i
 After=network.target
