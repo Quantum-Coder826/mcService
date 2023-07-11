@@ -21,7 +21,7 @@ if [ dpkg -s screen > /dev/null ]; then
     echo -e "${BLUE}Creating server folder${ENDCOLOR}"
     mkdir -p ~/minecraft/
 
-    echo -e "${GREEN}Instalation is done.${ENDCOLOR}"
+    echo -e "${GREEN}Instalation is done.\nSee: https://github.com/Quantum-Coder826/mcService for the docs. ${ENDCOLOR}"
     exit 0
 else
     echo -e "${YELLOW}The screen package is not installed\n Please run 'sudo apt install screen' to install the package and then re-run the installer.${ENDCOLOR}"
