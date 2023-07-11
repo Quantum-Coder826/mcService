@@ -88,4 +88,13 @@ systemctl --user start mc@<server-name>
 The service will open a `screen` session in the background so check using `screen -ls` and looking for a session named `mc_<server-name>`.
 
 # Connecting with a server
-The servers are spawned in a screen session you can list all active session using `screen -ls`
+The servers are spawned in a screen session you can list all active session using `screen -ls` the result should look something like:
+```bash
+user@server ~/minecraft$ screen -ls
+There is a screen on:
+        5983.mc_MechanicalMastery-1.3.0 (05/22/24 00:37:12)     (Detached)
+1 Socket in /run/screen/S-user.
+```
+The name formatting is `mc_<server-name>
+
+Screen is used to access the server terminal, you can run multiple servers but the naming convention for screen will stay the same, os running multiple servers with the same name might lead to problems differentiating in screen session.
