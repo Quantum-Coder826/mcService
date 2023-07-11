@@ -2,6 +2,7 @@
 A simple service I wrote to run minecraft java servers under a linux systemd service
 
 # installation
+You can manually install or use the install script. Have fun
 
 ## preparations
 check if you have `screen` installed, if it isn't pleas install the screen package by running:
@@ -66,6 +67,25 @@ user@server ~/minecraft$ tree -dL 1 ~/minecraft/
 7 directories
 ```
 
-The important part is the `run.sh`. It is used to start the server, ensure it is marked as execute using `chmod +x ./run.sh`. Most server downloads or modpacks will provide this file.
+## Running the service
+To run the server you need to only run two commands:
 
-## 
+### Enabling the service
+Telling systemd that it should autostart your server.
+This is optional but it is useful, if the minecraft crashes systemd will it restart for you and the server will automatically start after the machine is booted or restarted.
+```bash
+systemctl --user enable mc@<server-name>
+```
+`<server-name>` is the name of a sub-dir in `~/minecraft` where you will be running a server.
+
+### Starting the server
+This command will actually start the server so you will need it.
+```bash
+systemctl --user start mc@<server-name>
+```
+`<server-name>` is the name of a sub-dir in `~/minecraft` where you will be running a server.
+
+The service will open a `screen` session in the background so check using `screen -ls` and looking for a session named `mc_<server-name>`.
+
+# Connecting with a server
+The servers are spawned in a screen session you can list all active session using `screen -ls`
