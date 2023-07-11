@@ -22,3 +22,6 @@ ExecStop=/usr/bin/screen -S mc_%i -p 0 -X stuff 'stop^M'
 # auto restart the server on chrash
 Restart=on-failure
 RestartSec=60
+
+[Install]
+WantedBy=default.target
