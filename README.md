@@ -18,6 +18,7 @@ and set
 KillUserProcesses=no
 …
 ```
+This needs to be done otherwise systemd will kill the unit when you logout of the ssh session.
 
 ## automatic installation script
 For automatic installation copy the following line and run it in the terminal.
