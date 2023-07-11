@@ -22,7 +22,7 @@ wget -O - https://raw.githubusercontent.com/Quantum-Coder826/mcService/master/in
 - Copy/download the `mc@.service` file to that folder.
 - Create a `minecraft` folder in your home directory.
 
-# Using
+# How to use
 
 ## Adding a server
 Add your minecraft server(java) into a subfolder in the `~./minecraft` folder.
@@ -73,3 +73,5 @@ user@server ~/minecraft/MechanicalMastery-1.3.0$ tree -L 1 .
 ```
 
 The important part is the `run.sh`. It is used to start the server, ensure it is marked as execute using `chmod +x ./run.sh`. Most server downloads or modpacks will provide this file.
+
+## 
