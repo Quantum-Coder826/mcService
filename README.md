@@ -25,14 +25,38 @@ wget -O - https://raw.githubusercontent.com/Quantum-Coder826/mcService/master/in
 # How to use
 
 ## Adding a server
-Add your minecraft server(java) into a subfolder in the `~./minecraft` folder.
-It should look like this:
-
-```bash
+Adding servers is easy create a sub-dir in the `~/minecraft` folder. Inside the sub-dir you can install your sever. Ensure the folder contains a `run.sh` and it is marked as executable (coloured <span style="color:green">green</span> when using the `ls` command in bash)
+Most servers or modpacks will contain one just make ik executable using the `chmod +x run.sh` command.
+After installing your server the tree listing should look something like this:
+```
 user@server ~/minecraft$ tree -dL 1 ~/minecraft/
 /home/user/minecraft/
 |-- Create
 |-- MechanicalMastery-1.3.0
+|   |-- banned-ips.json
+|   |-- banned-players.json
+|   |-- config
+|   |-- defaultconfigs
+|   |-- eula.txt
+|   |-- icon.png
+|   |-- kubejs
+|   |-- libraries
+|   |-- local
+|   |-- logs
+|   |-- mods
+|   |-- ops.json
+|   |-- packmenu
+|   |-- patchouli_books
+|   |-- quests_structures
+|   |-- rhino.local.properties
+|   |-- run.sh
+|   |-- server.properties
+|   |-- skyblock_exports
+|   |-- user_jvm_args.txt
+|   |-- usercache.json
+|   |-- usernamecache.json
+|   |-- whitelist.json
+|   `-- world
 |-- architect
 |-- createTogether
 |-- encrypted
@@ -40,36 +64,6 @@ user@server ~/minecraft$ tree -dL 1 ~/minecraft/
 `-- more
 
 7 directories
-```
-each sub-dir of the minecraft contains a server for example MechanicalMastery-1.3.0:
-```bash
-user@server ~/minecraft/MechanicalMastery-1.3.0$ tree -L 1 .
-|-- banned-ips.json
-|-- banned-players.json
-|-- config
-|-- defaultconfigs
-|-- eula.txt
-|-- icon.png
-|-- kubejs
-|-- libraries
-|-- local
-|-- logs
-|-- mods
-|-- ops.json
-|-- packmenu
-|-- patchouli_books
-|-- quests_structures
-|-- rhino.local.properties
-|-- run.sh
-|-- server.properties
-|-- skyblock_exports
-|-- user_jvm_args.txt
-|-- usercache.json
-|-- usernamecache.json
-|-- whitelist.json
-`-- world
-
-12 directories, 12 files
 ```
 
 The important part is the `run.sh`. It is used to start the server, ensure it is marked as execute using `chmod +x ./run.sh`. Most server downloads or modpacks will provide this file.
