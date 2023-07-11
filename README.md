@@ -12,7 +12,7 @@ sudo apt install screen
 
 And open /etc/systemd/logind.conf (as root)
 and set
-```toml
+```
 [Login]
 …
 KillUserProcesses=no
