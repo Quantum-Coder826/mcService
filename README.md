@@ -1,2 +1,2 @@
 # mcService
-A simple service I wrote to run mincraft servers under a linux systemd service
+A simple service I wrote to run minecraft servers under a linux systemd service
