@@ -98,3 +98,6 @@ There is a screen on:
 The name formatting is `mc_<server-name>
 
 Screen is used to access the server terminal, you can run multiple servers but the naming convention for screen will stay the same, os running multiple servers with the same name might lead to problems differentiating in screen session.
+
+## How do i use screen?
+Here is a [link](https://wiki.archlinux.org/title/GNU_Screen) to the archwiki.
