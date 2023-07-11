@@ -7,7 +7,7 @@ BLUE="\e[e34m"
 ENDCOLOR="\e[0m"
 
 # check root
-if $USER == "root"; then
+if [ $USER == "root" ]; then
     echo -e "${YELLOW}This file does not need to be run as root. Exiting${ENDCOLOR}"
     exit 1
 fi
