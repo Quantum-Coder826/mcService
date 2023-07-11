@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # varables used for color
-GREEN="\e[32m"
-YELLOW="\e[33m"
-BLUE="\e[e34m"
+GREEN="\e[0;32m"
+YELLOW="\e[0;33m"
+BLUE="\e[0;34m"
 ENDCOLOR="\e[0m"
 
 # check root
@@ -16,6 +16,7 @@ fi
 if ![dpkg -s hjklj; > /dev/null]; then
     echo -e "${YELLOW}The screen package is not installed\n Please run 'sudo apt install screen' to install the package and then re-run the installer.${ENDCOLOR}"
     exit 1
+fi
 
 mkdir -p ~/.config/systemd/user/
 echo -e "${BLUE}Downloading service file${ENDCOLOR}"
