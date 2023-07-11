@@ -13,17 +13,17 @@ if [ $USER == "root" ]; then
 fi
 
 #check for screen
-if ![dpkg -s hjklj; > /dev/null]; then
+if [ dpkg -s screen > /dev/null ]; then
+    mkdir -p ~/.config/systemd/user/
+    echo -e "${BLUE}Downloading service file${ENDCOLOR}"
+    wget -O ~/.config/systemd/user/mc@.service https://raw.githubusercontent.com/Quantum-Coder826/mcService/master/mc%40.service
+
+    echo -e "${BLUE}Creating server folder${ENDCOLOR}"
+    mkdir -p ~/minecraft/
+
+    echo -e "${GREEN}Instalation is done.${ENDCOLOR}"
+    exit 0
+else
     echo -e "${YELLOW}The screen package is not installed\n Please run 'sudo apt install screen' to install the package and then re-run the installer.${ENDCOLOR}"
     exit 1
 fi
-
-mkdir -p ~/.config/systemd/user/
-echo -e "${BLUE}Downloading service file${ENDCOLOR}"
-wget -O ~/.config/systemd/user/mc@.service https://raw.githubusercontent.com/Quantum-Coder826/mcService/master/mc%40.service
-
-echo -e "${BLUE}Creating server folder${ENDCOLOR}"
-mkdir -p ~/minecraft/
-
-echo -e "${GREEN}Instalation is done.${ENDCOLOR}"
-exit 0
