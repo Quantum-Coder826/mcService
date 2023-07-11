@@ -10,6 +10,15 @@ check if you have `screen` installed, if it isn't pleas install the screen packa
 sudo apt install screen
 ```
 
+And open /etc/systemd/logind.conf (as root)
+and set
+```toml
+[Login]
+…
+KillUserProcesses=no
+…
+```
+
 ## automatic installation script
 For automatic installation copy the following line and run it in the terminal.
 ```bash
@@ -22,6 +31,9 @@ wget -O - https://raw.githubusercontent.com/Quantum-Coder826/mcService/master/in
 - Create the following folder if it does not exist: `~/.config/systemd/user/`
 - Copy/download the `mc@.service` file to that folder.
 - Create a `minecraft` folder in your home directory.
+- Open `/etc/systemd/logind.conf` and set `KillUserProcesses=no`
+- run `systemctl restart systemd-logind`
+- and run `systemctl --user daemon-reload`
 
 # How to use
 
