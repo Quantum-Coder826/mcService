@@ -23,7 +23,7 @@ This needs to be done otherwise systemd will kill the unit when you logout of th
 ## automatic installation script
 For automatic installation copy the following line and run it in the terminal.
 ```bash
-wget -O - https://raw.githubusercontent.com/Quantum-Coder826/mcService/master/installer.sh | tr -d '\r' | sudo bash
+wget -O - https://raw.githubusercontent.com/Quantum-Coder826/mcService/master/installer.sh | tr -d '\r' | bash
 ```
 >**note**
 > The install script is kinda dumb so it might fail.
